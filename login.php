@@ -23,7 +23,7 @@
                     
 
                     <div class="col-md-4 col-md-offset-4 form-login" >
-                    <img src="/pemira/img/pemilu.png" width="150px" height="150px" style="margin-bottom: 0%;"/>
+                    <img src="/pemira/img/pemilu.png" width="150px" height="150px"/>
                     <p>PEMIRA 2020</p>
                     <!-- cek pesan notifikasi -->
                     <?php 
@@ -38,10 +38,10 @@
                     }
                     ?>
 
-                        <div class="outter-form-login" >
+                        <div class="outter-form-login" style="margin-bottom: 10%;" >
                         
 
-                            <form action="/pemira/verif.php" class="inner-login" method="post" onSubmit="return validasi()">
+                            <form action="/pemira/verif.php" method="post" class="inner-login"  onSubmit="return validasi()">
                             <h3 class="text-center title-login">Login Mahasiswa</h3>
                                 <div class="form-group">
                                     <input type="text" class="form-control" name="username" placeholder="Username">
@@ -52,7 +52,10 @@
                                 </div>
                                 
                                 <input type="submit" class="btn btn-block btn-custom-green" value="LOGIN" />
-                                <input type="submit" class="btn btn-block btn-custom-green-a" value="BACK" href="/" />
+                                
+                            </form>
+                            <form action="/pemira/index.php" method="post" class="inner-login" style="margin-top: 2%">
+                            <button class="btn btn-block btn-custom-green-a">BACK</button>
                                 
                                 <div class="text-center forget">
                                     <a href="#">Forgot Password?</a>

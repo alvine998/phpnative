@@ -1,8 +1,13 @@
 <?php
     //koneksi ke sql
-    $server = "localhost";
+    $host = "localhost";
     $username = "root";
     $password = "";
-    $database = "pemira";
-    mysqli_connect($server,$username,$password,$database) or die("gagal, db tidak ditemukan");
+    $db = "pemira";
+    
+    $koneksi = mysqli_connect($host,$username,$password,$db);
+
+    if(!$koneksi) {
+		die("Koneksi gagal : ".mysql_connect_error());
+	}
 ?>
