@@ -1,0 +1,2 @@
+# phpnative
+ini untuk php
