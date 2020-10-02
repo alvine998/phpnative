@@ -9,10 +9,16 @@ $login = mysqli_query($koneksi, "select * from tb_admin where username ='$userna
 $cek = mysqli_num_rows($login);
 
 if($cek > 0){
-    $data = mysqli_fetch_assoc($cek);
+    
+    session_start();
+    while( $ngecheck = mysqli_fetch_assoc($login) ){
+        // $nama = $ngecheck['nama'];
+        $_SESSION['username'] = $username;
+        $_SESSION['nama'] = $ngecheck['nama'];;
+    }
 
-    $_SESSION['username'] = $username;
-    $_SESSION['nama'] = $data['nama'];
+    // echo $_SESSION['nama'];
+    // die;
 
     header("location:/pemira/admin/admin.php");
 } else {
